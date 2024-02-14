@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+
+.main{
+    background-image: url();
+    background-position: center;
+    background-size: cover;
+    padding-top: 4vh;
+    z-index: 96;
+    transition: padding-left 0.5s, width 0.5s;
+
+}
+
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+  
+  
+  
+.container a{
+    text-decoration: none;
+}
+
+.console{
+    display: flex;
+    width: 100vw;
+    height: 9vh;
+    background-color: white;
+    z-index: 99;
+    box-shadow: 0px 1px 0px rgba(116, 116, 116, 0.2);
+}
+
+
+.logo {
+    position: relative;
+    top: 0.3vh;
+    left: 5vw;
+    z-index: 97;
+}
+
+.logo H2{
+    font-family: 'Bungee Shade';
+    font-size: 25px;
+    color: #000000;
+   
+}
+
+
+
+.rectangle {
+    width: 250px;
+    height: 220px;
+    margin: 10px;
+    margin-bottom: 35vh;
+    background-color: rgb(215, 215, 215);
+    color: #000000;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in-out 0.3s, box-shadow 0.3s;
+    box-shadow: 1px 12px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Roboto;
+}
+
+
+.rectangle:hover {
+    background-color:#000000;
+    color: #ffffff;
+    
+    
+}
+
+.menubar {
+    position: fixed;
+    top: 3.5%;
+    left: 2vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.user-icon {
+    position: fixed;
+    top: 3%;
+    right: 2vw;
+    font-size: 20px;
+    color: #000; 
+    cursor: pointer;
+}
+
+
+
+.menulateral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18vw;
+    height: 100vh;
+    background-color:#ffffff;;
+    z-index:98;
+    transform:translateX(-100%);
+    box-shadow:  1px 0px 0px rgba(116, 116, 116, 0.2);
+    transition:transform 0.5s ease;
+    
+}
+
+.menulateral ul{
+   margin-left: 02vw;
+   margin-top:9vh;
+}
+
+.menulateral li{
+    margin-top: 1vh;
+    font-size: 20px;
+}
+
+.menulateral a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-active{
+    transform: translateX(0%);
+            
+}
+
+.menu-active .main{
+    width: 82vw; /* Largura reduzida quando o menu está ativo */
+  padding-left: 18vw; /* Espaço para acomodar o menu lateral */
+}

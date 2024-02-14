@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link css-->
+    <link rel="stylesheet" href="css\style2.css"><!--Fim-->
+
+    <!--Fonte Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gruppo&display=swap" rel="stylesheet">
+    <!--Fim-->
+ 
+    <link rel="icon" href="../public/css/image-PhotoRoom (1).png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    
+
+
+    <title>Log in SHELFER</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+
+            <div class="login-form">
+
+                <div class="logo">
+                    <H1>SHELFER</H1>
+                </div>
+
+
+                <form action="/login" method="POST">
+                    <h4>INSIRA SUA CONTA</h4>
+                    <input type="text" placeholder="EMAIL " id="email" name="email" required>
+                    <span id="login-error" class="error-span"></span>
+                    <input type="password" placeholder="SENHA" id="senha" name="senha" required>
+
+                    <input type="submit" value="LOGIN">
+
+                </form>
+
+                <div class="Linksentrada">
+                    <p>Não tem uma conta? <a href="cadastrousuarios.html"> Registre-se agora</a></p>
+                    <p><a href="#">Esqueceu sua senha?</a></p>
+                </div>
+
+                <span id="password-error" class="password"></span>
+
+            </div>
+
+            <div class="img">
+
+            </div>
+
+        </div>
+
+
+
+        
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

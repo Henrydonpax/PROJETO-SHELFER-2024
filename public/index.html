@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link css-->
+    <link rel="stylesheet" href="css\style.css"><!--Fim-->
+
+    <!--Fonte Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gruppo&display=swap" rel="stylesheet">
+    <!--Fim-->
+
+    <link rel="icon" href="../public/css/image-PhotoRoom (1).png" type="image/x-icon">
+
+
+
+    <title>Log in SHELFER</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="login-form">
+
+            <div class="logo">
+                <H1>SHELFER</H1>
+            </div>
+
+            <form>
+                <h3>ENTER YOUR ACCOUNT</h3>
+                <input type="text" placeholder="EMAIL OR ID" id="login" required>
+                <span id="login-error" class="error-span"></span>
+                <input type="password" placeholder="PASSWORD" id="password" required>
+                <span id="password-error" class="error-span"></span>
+                <input type="button" value="LOGIN" onclick="validation()">
+            </form>
+            <p><a href="#">Forgot your password?</a></p>
+
+           
+
+
+        </div>
+    </div>
+
+
+    <script>
+
+        function validation() {
+
+            var login = document.getElementById("login").value;
+            var password = document.getElementById("password").value;
+
+            var loginError = document.getElementById("login-error");
+            var passwordError = document.getElementById("password-error");
+
+
+            loginError.textContent = "";
+            passwordError.textContent = "";
+
+
+            if (login === "Administrator" && password === "quality") {
+                window.location.href = "home.html";
+            } else {
+                if (login !== "Administrator") {
+                    loginError.textContent = "Login incorreto";
+                }
+                if (password !== "quality") {
+                    passwordError.textContent = "Senha incorreta";
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+
+</html>

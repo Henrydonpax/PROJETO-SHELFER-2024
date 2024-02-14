@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'roboto';
+    
+}
+
+
+
+
+body{
+    background-color: #ffffff
+}
+
+
+.console{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color:#ffffff;
+    z-index: 95;
+    box-shadow: 2px 0px 2px   #888888;
+}
+
+
+.menulateral{
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 8vh;
+    box-shadow: 1px 0px 1px #d4d4d4;
+    z-index: 92;
+    transition: 0.8s ease;
+}
+
+.menu{
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.menu:hover{
+    background-color:#ececec; 
+    transition: 0.3s ease-in-out;
+}
+
+.menu span{
+    flex: 1;
+    min-width: 20px;
+    max-width: 40px;
+    padding-left: 30px; ;
+}
+
+.txt{
+    flex: 3;
+    padding-left: 2px;
+}
+
+.oculto{
+    width: 85px;
+    
+}
+
+.oculto .txt{
+    display: none;
+}
+
+.oculto .arrow {
+    transform: rotate(180deg);
+    margin-left: 19px;
+}
+
+.oculto  .central {
+    margin-left: 85px; /* Ajuste a posição esquerda quando o menu está encolhido */
+    width: calc(100vw - 85px); /* Ajuste a largura da div central quando o menu está encolhido */
+}
+
+
+.logo {
+    
+    margin-left: 2.5vw;
+    z-index: 91;
+}
+
+.logo H1{
+    font-family: 'Bungee Shade';
+    font-style: italic;
+    color:rgb(0, 0, 0);
+    font-size: 28px;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 86vw;
+    font-size: 20px;
+    color: #000; 
+    cursor: pointer;
+}
+
+
+.arrow  { 
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 11px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+
+
+.search-bar{
+    display: flex;
+    align-items:center;
+    position: fixed;
+    top: 8vh;
+    left: 13vw;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 0px 2px   #888888;
+}
+
+
+.d-flex{
+    position: fixed;
+    right: 2.5vw;
+}
+
+.d-flex input[type="search"] {
+ width: 60vw;
+ height: 3vh;
+ border: none;
+ border-bottom: 1px solid #afafaf;
+ outline: none;
+}
+
+.d-flex button {
+    border: none;
+    background-color: #ffffff;   
+}
+
+
+.log span{
+    
+    position: fixed;
+    top: 9.2vh;
+    left: 16.5vw;
+}
+
+.log p{
+ display: flex;
+ vertical-align: middle;
+ padding-left: 6vw;
+ font-size: 21px;
+}
+
+.central{
+position: absolute;
+width: 80vw;
+height:20vh;
+top: 75vh;
+left: 16.5vw;
+background-color: #ffffff;
+z-index: 90;
+transition: 0.8s eaase;
+}
+
+
+.central-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Duas colunas iguais */
+    grid-gap: 20px; /* Espaçamento entre as células */
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.box {
+    width: 100%; /* 100% da largura da célula */
+    height: 20vh; /* 100% da altura da célula */
+    background-color:  #111111;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: #888888;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+
+.central-grid a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.cadastro{
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    top: 1vh;
+    left: 25vw;
+}

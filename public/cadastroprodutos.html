@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link css-->
+    <link rel="stylesheet" href="css/cadastroproduto.css"><!--Fim-->
+
+    <!--Fonte Google Bungee Shade-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gruppo&display=swap" rel="stylesheet">
+    <!--Fim-->
+
+    <!--Google Fonts ROBOTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!---->
+
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!---->
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!---->
+
+
+    <link rel="icon" href="../public/css/image-PhotoRoom (1).png" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="produto-form">
+
+            <div class="logo">
+                <H1>SHELFER</H1>
+            </div>
+
+            <form action="cad-produtos" method="post" class="form">
+
+                <H2>Cadastro de Produtos</H2>
+
+                <input type="text" placeholder="NOME" id="nome" name="nome">
+                <input type="text" placeholder="CATEGORIA" id="idcategoria" name="categoria">
+
+                <!--<label for="categoria">CATEGORIAS</label>
+                <select id="categoria" name="categoria">
+                                       
+                    <option >1</option>
+                    <option >2</option>
+                    <option >FRIOS</option>
+                    <option >BEBIDAS</option>
+                    
+
+                </select><!-->
+
+                <input type="number" placeholder="PREÇO"   id="preco" name="preco">
+                <input type="text" placeholder="ID FORNECEDOR" id="idfornecedor" name="idfornecedor">
+
+                <!--SELECTS-<label for="idfornecedor">ID FORNECEDOR</label>
+                <select id="idfornecedor" name="idfornecedor">
+
+                    <option >1</option>
+                    <option >2</option>
+
+                </select><!-->
+
+                <input type="text" placeholder="ID ESTOQUE" id="idestoque" name="idestoque">
+
+                  <!---- <label for="idestoque">ID ESTOQUE</label>
+                    <select id="idestoque" name="idestoque">
+                        
+                        <option value="ESTOQUE 1"> 1</option>
+                        <option value="ESTOQUE 2"> 2</option>
+
+                    </select><!-->
+
+                <input type="number" placeholder="QUANTIDADE" id="quantidade" name="quantidade">
+                <input type="number" placeholder="LOTE" id="lote" name="lote">
+                <label for="datavalidade">DATA DE VALIDADE</label>
+                <input type="date" placeholder="DATA DE VALIDADE" id="datavalidade" name="datavalidade">
+                <input type="submit" id="cadastrarProduto" value="CADASTRAR PRODUTO">
+
+            </form>
+
+        </div>
+
+
+
+        <div class="menubar">
+            <i class="material-icons">menu_outlined</i>
+          </div>
+      
+
+    </div>
+
+
+    <div class="menulateral">
+        
+        <Ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
+  
+        </Ul>
+  
+      </div>
+
+
+      <script>
+
+        const menubar = document.querySelector('.menubar');
+        const menulateral = document.querySelector('.menulateral');
+    
+        menubar.addEventListener('click', function () {
+          menulateral.classList.toggle('menu-active')
+    
+        });
+    
+
+     
+      </script>
+
+</body>

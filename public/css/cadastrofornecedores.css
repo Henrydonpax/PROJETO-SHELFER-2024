@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'roboto';
+    
+    
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+
+body{
+    background-color: #ffffff
+}
+
+
+.console{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color:#ffffff;
+    z-index: 93;
+    box-shadow: 2px 0px 2px   #888888;
+}
+
+
+.logo {
+    
+    margin-bottom: 5vh;
+    margin-left: 2.5vw;
+    z-index: 91;
+}
+
+.logo H1{
+    font-family: 'Bungee Shade';
+    font-style: italic;
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 85vw;
+    font-size: 20px;
+    color: #000; 
+    cursor: pointer;
+}
+
+
+
+
+
+
+.menulateral{
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 8vh;
+    box-shadow: 1px 0px 1px #d4d4d4;
+    z-index: 92;
+    transition: 0.8s ease;
+}
+
+.menu{
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.menu:hover{
+    background-color:#ececec; 
+    transition: 0.3s ease-in-out;
+}
+
+.menu span{
+    flex: 1;
+    min-width: 20px;
+    max-width: 40px;
+    padding-left: 30px; ;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.txt{
+    flex: 3;
+    padding-left: 1px;
+}
+
+.oculto{
+    width: 85px;
+    
+}
+
+.oculto .txt{
+    display: none;
+}
+
+.oculto .arrow {
+    transform: rotate(180deg);
+    margin-left: 19px;
+}
+
+.oculto  .central {
+    margin-left: 85px; /* Ajuste a posição esquerda quando o menu está encolhido */
+    width: calc(100vw - 85px); /* Ajuste a largura da div central quando o menu está encolhido */
+}
+
+
+.arrow  { 
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 11px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+
+
+.search-bar{
+    display: flex;
+    align-items:center;
+    position: fixed;
+    top: 8vh;
+    left: 13vw;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 0px 2px   #888888;
+}
+
+
+.d-flex{
+    position: fixed;
+    right: 2.5vw;
+}
+
+.d-flex input[type="search"] {
+ width: 60vw;
+ height: 3vh;
+ border: none;
+ border-bottom: 1px solid #afafaf;
+ outline: none;
+}
+
+.d-flex button {
+    border: none;
+    background-color: #ffffff;   
+}
+
+
+
+
+
+.log span{
+    font-size: 22px;
+    position: fixed;
+    top: 9.2vh;
+    left: 16.5vw;
+}
+
+.log p{
+ vertical-align: middle;
+ position: fixed;
+ top: 9.5vh;
+ left: 18.5vw;
+ font-size: 15px;
+}
+
+.central{
+display: flex;
+position: fixed;
+width: 80vw;
+height:20vh;
+top: 75vh;
+left: 16.5vw;
+background-color: #ffffff;
+
+}
+
+.central-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Duas colunas iguais */
+    grid-gap: 20px; /* Espaçamento entre as células */
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+
+.central-grid a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.dad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -69vh;
+}
+
+.child{
+    
+    width: 80vw;
+    height:70vh;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    z-index: 90;
+    box-shadow: 0.5px 1px 30px 2px rgba(151, 151, 151, 0.3);
+}
+
+.titulo{
+   display: flex;
+   justify-content:flex-start;
+   margin-left: 3.1vw;
+   margin-top: 5vh;
+}
+
+
+.titulo p{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.form-container {
+    padding-top: 3vh;
+    margin: 0 auto;
+    max-width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:3%;
+}
+
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+    
+}
+
+
+
+.form-group input {
+    height: 5%;
+    padding: 5%;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #afafaf;
+    outline: none;
+}
+
+.form-group-third {
+    grid-column: span 2;
+}
+
+.form-group button {
+    padding: 12px;
+    height: 6vh;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius:2% ;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-group button:hover{
+    background-color: #333333;
+}
+

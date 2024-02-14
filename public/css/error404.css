@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    overflow: hidden;
+
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.console{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color:#ffffff;
+    z-index: 95;
+    box-shadow: 2px 0px 2px   #888888;
+}
+
+.logo {
+    width: 10vw;
+    margin-left: 2.5vw;
+    z-index: 96;
+}
+
+.logo H1{
+    font-family: 'Bungee Shade';
+    font-style: italic;
+    color:rgb(0, 0, 0);
+    font-size: 25px;
+    
+}
+
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 83vw;
+    font-size: 20px;
+    color: #000; 
+    cursor: pointer;
+}
+
+
+.texto{
+    position: relative;
+    top: 14%;
+    left: 19%;
+}
+
+.texto H1{
+    font-family:'Bungee Shade';
+    font-size: 110px;
+}
+
+
+.texto H2{
+    max-width: 485px;
+    margin-top: -4%;
+    margin-bottom: 1%;
+}
+.texto p{
+    font-family: 'ROBOTO';
+    max-width: 485px;
+}
+
+.texto button{
+    margin-top: 2%;
+    width: 450px;
+    height:45px;
+    border: none;
+    background-color: #000;
+    color: white;
+}
+
+
+.texto button:hover{
+    background-color: white;
+    border: black 1px solid;
+    color:black;
+    cursor: pointer;
+    animation: blink 2s infinite;
+}
+
+
+@keyframes blink {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+      box-shadow: none;
+    }
+  }
+
+
+.img{
+    position: relative;
+    left: 54%;
+    top:-40%;   
+}
+
+.img input[type="image"]{
+    width: 30%;
+}
