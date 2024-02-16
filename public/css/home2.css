@@ -84,9 +84,9 @@ body{
 
 
 .logo {
+    margin-left: 2%;
+    margin-top: 0.1%;
     
-    margin-left: 2.5vw;
-    z-index: 91;
 }
 
 .logo H1{
@@ -97,24 +97,10 @@ body{
 }
 
 .user-icon {
-    display: flex;
-    align-items: center;
-    margin-left: 85vw;
-    font-size: 20px;
-    color: #000; 
-    cursor: pointer;
+   position: fixed;
+   top: 2%;
+   right: 2%;
 }
-
-
-.arrow  { 
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 11px;
-    padding-right: 10px;
-    padding-bottom: 12px;
-    cursor: pointer;
-}
-
 
 
 .search-bar{
@@ -152,23 +138,24 @@ body{
     font-size: 22px;
     position: fixed;
     top: 9.2vh;
-    left: 10vw;
+    left: 7%;
 }
 
 .log p{
  vertical-align: middle;
  position: fixed;
  top: 9.5vh;
- left:12vw;
+ left:8.5%;
  font-size: 15px;
 }
 
 .central{
     position: absolute;
-    width: 80vw;
-    height:20vh;
-    top: 20vh;
-    left: 10vw;
+    width: 90%;
+    height:100%;
+    top: 20%;
+    left: 7%;
+    right: 7%;
     background-color: #ffffff;
     z-index: 90;
     transition: 0.8s eaase;
@@ -181,20 +168,30 @@ body{
     font-size: 22px;
     
 }
+
 .central-grid {
     display: grid;
-    grid-template-columns: repeat(4, 2fr); 
-    grid-gap: 20px; /* Espaçamento entre as células */
-    background-color: rgb(255, 255, 255);
-    flex-direction: row;
+    grid-template-columns: repeat(4,2fr); 
+    grid-gap: 10px; 
+    
+   
 }
-
 
 
 .central-grid p[class="box-title"] {
     margin-top: 3vh;
-    margin-left: 4vh;
-    
+    margin-left: 4vh;   
+    color: white;
+}
+
+
+
+.box {
+    display: flex;
+    width: 22vw;
+    height: 12vh;
+    background-color: black;
+    color: white;
 }
 
 #quantidadeProdutos {
@@ -202,7 +199,6 @@ body{
     margin-right:1vw;
     margin-left: -2vw;
     font-size: 22px;
-    
 }
 
 #valorTotalItens {
@@ -219,23 +215,7 @@ body{
     margin-right:1vw;
     margin-left: 5vw;
     font-size: 22px;
-    
-
 }
-.box {
-    width: 100%; /* 100% da largura da célula */
-    height: 12vh; /* 100% da altura da célula */
-    background-color: #111111;
-    box-shadow: 0.5px 0.5px 5px 2px rgba(129, 129, 129, 0.3);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    display: flex;
-    white-space: nowrap;
-    
-    
-}
-
-
 
 
 .central-grid a{
@@ -254,27 +234,28 @@ body{
 }
 
 .down-grid {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:10px;
+    margin-top: 4vh;
+    
+    
+    
 }
 
 .box-canva{
-    margin-top:4vh;
-    width: 52.8vw;
+   
     height: 57vh;
     border: 1px solid whitesmoke;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1); /* Adicione um box shadow */
-    margin-right: 10px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1); 
    
 }
 
 .box-canva2{
-    margin-top:4vh;
-    width: 52.8vh;
+     
+    
     border: 1px solid whitesmoke;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1); /* Adicione um box shadow */
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);  
 }
 
 
