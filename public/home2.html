@@ -46,13 +46,7 @@
 
 
 
-
-        <div class="menulateral">
-
-            <div class="arrow">
-                <span class="material-symbols-outlined">arrow_back</span>
-            </div>
-
+        <div class="menulateral" onmouseover="ExpandeMenu()" onmouseout="RetraiMenu()">
             <div class="menu">
                 <span class="material-symbols-outlined">manage_accounts</span>
                 <a href="menuussuarios.html">
@@ -140,8 +134,8 @@
 
                 <a href="#">
                     <div class="box" id="quantidadeProdutosBox">
-                        <p class="box-title">Quantidade total de itens cadastrados</p>
-                        <p id="quantidadeProdutos"></p>
+                        <p class="box-title">Quantidade de produtos em estoque</p>
+                       <p id="quantidadeProdutos"></p>
                     </div>
                 </a>
 
@@ -149,20 +143,20 @@
                 <a href="#">
                     <div class="box" id="valorTotalItensBox">
                         <p class="box-title">Valor total do estoque</p>
-
                         <p id="valorTotalItens"></p>
                     </div>
                 </a>
 
                 <a href="#">
-                    <div class="box" id="Lucrobrutobox">
-                        <p class="box-title">Lucro bruto mensal</p>
-                        <p id="lucroBruto"></p>
-                    </div>
+                    <div class="box"></div>
                 </a>
 
-
+                <a href="#">
+                    <div class="box"></div>
+                </a>
+             
             </div>
+
 
 
 
@@ -200,19 +194,19 @@
 <script>
 
 
+function ExpandeMenu(){
 
-    //menu lateral 
-    var arrow = document.querySelector(".arrow")
-    var menulateral = document.querySelector(".menulateral")
+var menulateral = document.querySelector(".menulateral")
+menulateral.classList.add('expande');
 
-    arrow.onclick = e => {
-        if (!menulateral.classList.contains('oculto')) {
-            menulateral.classList.add('oculto');
-        } else {
-            menulateral.classList.remove('oculto');
-        }
-    }
-    //
+}
+
+function RetraiMenu(){
+
+var menulateral = document.querySelector(".menulateral")
+menulateral.classList.remove('expande');
+}
+
 
 
     //boxes dashboard
