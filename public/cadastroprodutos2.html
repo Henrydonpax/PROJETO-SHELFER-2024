@@ -43,12 +43,7 @@
         <div class="main">
 
 
-            <div class="menulateral">
-
-                <div class="arrow">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </div>
-
+            <div class="menulateral" onmouseover="ExpandeMenu()" onmouseout="RetraiMenu()">
                 <div class="menu">
                     <span class="material-symbols-outlined">manage_accounts</span>
                     <a href="menuussuarios.html">
@@ -80,10 +75,10 @@
 
                 <div class="menu">
                     <span class="material-symbols-outlined">local_shipping</span>
-                    <div class="txt">Fornecedores</div>
+                    <a href="menufornecedores.html">
+                        <div class="txt">Fornecedores</div>
+                    </a>
                 </div>
-
-
 
 
 
@@ -112,8 +107,6 @@
 
                 <div class="search-bar">
 
-
-
                     <div class="log">
                         <span class="material-symbols-outlined">shield_person</span>
                         <p>Bem vindo de volta, Administrator!</p>
@@ -129,7 +122,7 @@
                 </div>
 
 
-                <div class="square"></div>
+                
 
                 <div class="produto-form">
 
@@ -138,40 +131,24 @@
                         <H2>Cadastro de Produtos</H2>
 
                         <input type="text" placeholder="NOME" id="nome" name="nome">
-
                         <input type="number" placeholder="QUANTIDADE" id="quantidade" name="quantidade">
-
                         <input type="number" placeholder="PREÇO" id="preco" name="preco">
-
                         <input type="number" placeholder="LOTE" id="lote" name="lote">
-
+                        
                         <label for="idfornecedor">ID FORNECEDOR</label>
                         <select id="idfornecedor" name="idfornecedor">
-                            <% fornecedores.forEach(function(fornecedor) { %>
-                                <option value="<%= fornecedor.idfornecedor %>">
-                                    <%= fornecedor.nome %>
-                                </option>
-                                <% }); %>
+                           
                         </select>
 
                         <label for="idestoque">ID ESTOQUE</label>
                         <select id="idestoque" name="idestoque">
-                            <% estoques.forEach(function(estoque) { %>
-                                <option value="<%= estoque.idestoque %>">
-                                    <%= estoque.nome %>
-                                </option>
-                                <% }); %>
+                            
                         </select>
 
                         <label for="idcategoria">ID CATEGORIA</label>
                         <select id="idcategoria" name="idcategoria">
-                            <% categorias.forEach(function(categoria) { %>
-                                <option value="<%= categoria.idcategoria %>">
-                                    <%= categoria.nome %>
-                                </option>
-                                <% }); %>
+                            
                         </select>
-
 
 
                         <label for="datavalidade">DATA DE VALIDADE</label>
@@ -181,9 +158,9 @@
                     </form>
 
                 </div><!--produto-form-->
+ 
 
-
-            </div><!--square-->
+            </div><!--central-->
 
 
         </div><!--main-->
@@ -196,6 +173,21 @@
 
 
 <script>
+
+    function ExpandeMenu() {
+
+        var menulateral = document.querySelector(".menulateral")
+        menulateral.classList.add('expande');
+
+    }
+
+    function RetraiMenu() {
+
+        var menulateral = document.querySelector(".menulateral")
+        menulateral.classList.remove('expande');
+    }
+
+
 
 
 
