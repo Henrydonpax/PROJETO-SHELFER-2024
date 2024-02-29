@@ -7,33 +7,18 @@ const cors = require('cors');
 const db = require('./conexao');
 const client = require('./conexao');
 const { obterInformacoesSistema } = require('./informacoesSistema');
+const passport = require('passport');
 
 
 routes.use(express.json());
 routes.use(express.urlencoded({ extended: true }));
 
 
-routes.post('/login', async (req, res) => {
-  const email = req.body.email;
-  const senha = req.body.senha;
-
-  try {
-
-    await db.connect();
-    const result = await db.query('SELECT * FROM usuarios WHERE email = $1 AND senha = $2', [email, senha]);
-
-    if (result.rows.length > 0) {
-      res.redirect('/home2.html');
-    } else {
-      res.status(401).json({ success: false, message: 'Credenciais inválidas' });
-    }
-  } catch (error) {
-    console.error('Erro ao consultar o banco de dados:', error);
-    res.redirect('/error404.html');
-  } finally {
-    await db.end();
-  }
-});
+routes.post('/login', passport.authenticate('local', {
+  successRedirect: '../../public/home2.html',
+  failureRedirect: '../../public/cadastrousuarios.html',
+  failureFlash: true
+}));
 
 
 routes.get('/login', function (req, res) {
