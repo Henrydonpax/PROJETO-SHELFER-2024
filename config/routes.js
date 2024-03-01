@@ -8,16 +8,16 @@ const db = require('./conexao');
 const client = require('./conexao');
 const { obterInformacoesSistema } = require('./informacoesSistema');
 const passport = require('passport');
-
+require('./auth'); 
 
 routes.use(express.json());
 routes.use(express.urlencoded({ extended: true }));
 
 
 routes.post('/login', passport.authenticate('local', {
-  successRedirect: '../../public/home2.html',
-  failureRedirect: '../../public/cadastrousuarios.html',
-  failureFlash: true
+  successRedirect: '/home',
+  
+  failureFlash:true
 }));
 
 
@@ -43,7 +43,7 @@ routes.post('/home', async (req, res) => {
 
 
 routes.get('/home', function (req, res) {
-  res.sendFile(path.join(__dirname + '../../public/home2.html'))
+res.sendFile(path.join(__dirname + '../../public/home2.html'))
 })
 
 
