@@ -1,14 +1,12 @@
-const express = require('express');
+import express from 'express';
 const routes = express.Router();
 const router = require('express').Router();
-const path = require('path');
-const Cadproduto = require('./insereproduto.js');
-const Cadusuario = require('./insereusuario.js')
-const cors = require('cors');
-const db = require('./conexao');
-const client = require('./conexao');
-const { obterInformacoesSistema } = require('./informacoesSistema');
-const passport = require('passport');
+import path from 'path';
+import Cadproduto from './insereproduto.js';
+import Cadusuario from './insereusuario.js';
+import db from './conexao'
+import {obterInformacoesSistema} from './informacoesSistema';
+import passport from 'passport';
 require('./auth'); 
 
 routes.use(express.json());
