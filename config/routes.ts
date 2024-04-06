@@ -2,8 +2,8 @@ import express from 'express';
 const routes = express.Router();
 const router = require('express').Router();
 import path from 'path';
-import Cadproduto from './insereproduto.js';
-import Cadusuario from './insereusuario.js';
+import Cadproduto from './insereproduto.ts';
+import Cadusuario from './insereusuario.ts';
 import db from './conexao'
 import {obterInformacoesSistema} from './informacoesSistema';
 import passport from 'passport';
@@ -14,6 +14,7 @@ routes.use(express.urlencoded({ extended: true }));
 
 
 export default (app:any) => {
+
   routes.post('/login', passport.authenticate('local', {
     successRedirect: '/home',
     

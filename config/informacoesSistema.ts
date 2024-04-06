@@ -1,6 +1,10 @@
 import db from './conexao';
 
-async function obterInformacoesSistema() {
+
+export default (obterInformacoesSistema:any) => {
+  
+ async function obterInformacoesSistema() {
+ 
   
   
   // Consultas SQL para obter informações do sistema
@@ -22,5 +26,6 @@ async function obterInformacoesSistema() {
   return informacoes;
   
 }
+}
 
-module.exports = {obterInformacoesSistema};
+module.exports = {obterInformaçoesSistema};

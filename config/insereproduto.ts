@@ -1,8 +1,11 @@
+import { IntegerType } from 'typeorm'
 import db from  './conexao'
-const Novoproduto = require('./routes')
+import Novoproduto from './routes'
 
-exports.insereNome = function (idfornecedor,nome,preco,idestoque,quantidade,idcategoria,lote,datavalidade){
-async function inserirdados(idfornecedor,nome,preco,idestoque,quantidade,idcategoria,lote,datavalidade){
+export default (Cadproduto:any) => {
+
+exports.insereNome = function (idfornecedor:IntegerType,nome:IntegerType,preco:IntegerType,idestoque:IntegerType,quantidade:IntegerType,idcategoria:IntegerType,lote:IntegerType,datavalidade:IntegerType){
+async function inserirdados(idfornecedor:IntegerType,nome:IntegerType,preco:IntegerType,idestoque:IntegerType,quantidade:IntegerType,idcategoria:IntegerType,lote:IntegerType,datavalidade:IntegerType){
     await db.connect()
     const Novoproduto='insert into produtos (idfornecedor,nome,preco,idestoque,quantidade,idcategoria,lote,datavalidade) values ($1,$2,$3,$4,$5,$6,$7,$8)'
     await db.query(Novoproduto,[idfornecedor,nome,preco,idestoque,quantidade,idcategoria,lote,datavalidade])
@@ -11,6 +14,7 @@ async function inserirdados(idfornecedor,nome,preco,idestoque,quantidade,idcateg
 
    }
    return(inserirdados(idfornecedor,nome,preco,idestoque,quantidade,idcategoria,lote,datavalidade))
+}
 }
 
 
