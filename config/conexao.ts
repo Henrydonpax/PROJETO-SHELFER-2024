@@ -1,8 +1,6 @@
-import { Client} from 'pg';
+import { Client } from 'pg';
 
-export default (db:any) => {
-
- db = new Client({
+const db = new Client({
   user: 'postgres',
   host: 'localhost',
   database: 'bancosistema',
@@ -10,8 +8,7 @@ export default (db:any) => {
   port: 5432,
 });
 
-}
-
+export default db;
 
 
 
