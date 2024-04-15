@@ -1,10 +1,9 @@
 import 'dotenv/config'
 import 'reflect/metadata'
-import {DataSource} from 'typeorm'
 
 import { Pool } from 'pg';
 
-class DataSource {
+class DataSource{
   private pool: Pool;
 
   constructor() {

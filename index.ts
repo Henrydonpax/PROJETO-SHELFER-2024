@@ -7,7 +7,7 @@ const port = 8080;
 import passport from 'passport';
 const LocalStrategy = require('passport-local').Strategy;
 import session from 'express-session';
-import errorHandler from 'ts/ErrorHandler';
+
 
 app.use(session({
     secret: 'segredo',
@@ -28,7 +28,6 @@ app.use(express.static(__dirname + '/imgs'));
 
 app.use(routes);
 
-app.use(errorHandler);
 
 
 

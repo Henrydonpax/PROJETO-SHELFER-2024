@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
-import Cadproduto from './insereproduto';
-import Cadusuario from './insereusuario';
+import {InsereProd} from './insereproduto';
+import {InsereUsu} from './insereusuario';
 import db from './conexao';
 import obterInformacoesSistema  from './informacoesSistema';
 import passport from 'passport';
@@ -55,7 +55,7 @@ routes.get('/cad-produtos', function (_req: Request, res: Response) {
 });
 
 routes.post('/cad-produtos', function (req: Request, res: Response) {
-  Cadproduto.NovoProduto(req.body.idfornecedor,req.body.nome, req.body.preco, req.body.idestoque, req.body.quantidade, req.body.categoria, req.body.lote, req.body.datavalidade)
+  InsereProd(req.body.idfornecedor,req.body.nome, req.body.preco, req.body.idestoque, req.body.quantidade, req.body.categoria, req.body.lote, req.body.datavalidade)
     .then(function () {
       res.send('Produto cadastrado com sucesso');
     })
@@ -74,7 +74,7 @@ routes.get('/cad-usuarios', function (_req: Request, res: Response) {
 routes.post('/cad-usuarios', async function (req: Request, res: Response) {
   try {
     await db.connect();
-    await Cadusuario.insereUsu(req.body.email, req.body.cpf, req.body.senha, req.body.nome);
+    await InsereUsu(req.body.email, req.body.cpf, req.body.senha, req.body.nome);
     res.send('<script>alert("Usuário cadastrado com sucesso"); window.location="/cad-usuarios";</script>');
   } catch (erro) {
     console.error('Erro ao obter informações do sistema:', erro);

@@ -2,6 +2,7 @@
   "name": "projeto-shelfer",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "abbrev": "^1.1.1",
     "accepts": "^1.3.8",
@@ -214,7 +215,8 @@
     "dev": "nodemon --exec ts mode .src/index.ts",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
     "migration:run": "typeorm-ts-node-node-commonjs -d",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -226,6 +228,6 @@
     "@types/passport": "^1.0.16",
     "@types/pg": "^8.11.5",
     "nodemon": "^3.1.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.5"
   }
 }
