@@ -24,7 +24,7 @@ routes.post('/login', passport.authenticate('local', {
 }));
 
 routes.get('/login', function (_req: Request, res: Response) {
-  res.sendFile(path.join(__dirname + '../../public/index2.html'));
+  res.sendFile(path.join(__dirname + "../../public/index2.html"));
 });
 
 

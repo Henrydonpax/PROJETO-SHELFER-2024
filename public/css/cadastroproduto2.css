@@ -196,20 +196,21 @@ body{
 
 
 .produto-form label{
-    margin-left: 13%;
+    display: flex;
     margin-top: 1vh;
+    margin-left: 13%;
     font-size: 14px;
     color: #646363;
 }
 
 .produto-form select{
     margin-left: 13%;
-    margin-top: 2vh;
+    margin-top: 1vh;
     width: 72%;
     height: 2vh;
     margin-bottom: 20px;
-    padding: 10px;
-    padding-left: 0%;
+    
+  
     font-size: 14px;
     border: none;
     border-bottom: 1px solid  #ccc ;
