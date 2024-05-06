@@ -32,15 +32,12 @@ routes.get('/login', function (_req: Request, res: Response) {
 
 routes.post('/home', async (_req: Request, res: Response) => {
   try {
-    await db.connect();
     const informacoes = await obterInformacoesSistema();
     res.json({ success: true, informacoes });
   } catch (error) {
     console.error('Erro ao obter informações do sistema:', error);
     res.status(500).json({ success: false, message: 'Erro interno do servidor' });
-  } finally {
-    await db.end();
-  }
+  } 
 });
 
 routes.get('/home', function (_req: Request, res: Response) {
@@ -73,15 +70,12 @@ routes.get('/cad-usuarios', function (_req: Request, res: Response) {
 
 routes.post('/cad-usuarios', async function (req: Request, res: Response) {
   try {
-    await db.connect();
     await InsereUsu(req.body.email, req.body.cpf, req.body.senha, req.body.nome);
     res.send('<script>alert("Usuário cadastrado com sucesso"); window.location="/cad-usuarios";</script>');
   } catch (erro) {
     console.error('Erro ao obter informações do sistema:', erro);
     res.send('Não foi possível finalizar o cadastro' + erro);
-  } finally {
-    await db.end();
-  }
+  } 
 });
 
 export default routes ;

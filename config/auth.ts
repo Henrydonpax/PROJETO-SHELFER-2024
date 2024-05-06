@@ -2,12 +2,19 @@ import { Strategy as LocalStrategy } from 'passport-local';
 import passport from 'passport';
 import db from './conexao';
 
+
+db.connect()
+  .then(() => console.log('Conexão com o banco de dados estabelecida'))
+  .catch(err => console.error('Erro ao conectar ao banco de dados:', err));
+
+
+
 passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'senha'
 }, async function (email: string, senha: string, done: Function) {
     try {
-        await db.connect();
+       
         const result = await db.query('SELECT * FROM usuarios WHERE email = $1 AND senha = $2', [email, senha]);
 
         if (result.rows.length === 0) {
@@ -18,9 +25,7 @@ passport.use(new LocalStrategy({
     } catch (error) {
         console.error('Erro ao consultar o banco de dados:', error);
         return done(error);
-    } finally {
-        await db.end();
-    }
+    } 
 }));
 
 passport.serializeUser((user: any, done: Function) => {
@@ -29,7 +34,7 @@ passport.serializeUser((user: any, done: Function) => {
 
 passport.deserializeUser(async (email: string, done: Function) => {
     try {
-        await db.connect();
+        
         const result = await db.query('SELECT * FROM usuarios WHERE email = $1', [email]);
 
         if (result.rows.length === 0) {
@@ -40,9 +45,8 @@ passport.deserializeUser(async (email: string, done: Function) => {
     } catch (error) {
         console.error('Erro ao consultar o banco de dados:', error);
         return done(error);
-    } finally {
-        await db.end()
-    }
+    } 
+    
 });
 
 export default passport;
