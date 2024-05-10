@@ -45,6 +45,14 @@ routes.get('/home', function (_req: Request, res: Response) {
 });
 
 
+routes.get('/produtos', function(_req: Request, res:Response){
+  res.sendFile(path.join(__dirname + '../../public/menuprodutos.html'));
+});
+
+
+routes.post('/produtos', function(_req:Request, res:Response){
+
+});
 
 
 routes.get('/cad-produtos', function (_req: Request, res: Response) {
@@ -71,7 +79,8 @@ routes.get('/cad-usuarios', function (_req: Request, res: Response) {
 routes.post('/cad-usuarios', async function (req: Request, res: Response) {
   try {
     await InsereUsu(req.body.email, req.body.cpf, req.body.senha, req.body.nome);
-    res.send('<script>alert("Usuário cadastrado com sucesso"); window.location="/cad-usuarios";</script>');
+    res.send('<script>alert("Usuário cadastrado com sucesso"); window.location="/cad-usuarios";</script>')
+    res.redirect("../../public/index2.html")
   } catch (erro) {
     console.error('Erro ao obter informações do sistema:', erro);
     res.send('Não foi possível finalizar o cadastro' + erro);
