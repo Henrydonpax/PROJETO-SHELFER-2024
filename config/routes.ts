@@ -10,6 +10,10 @@ import './auth';
 const routes = express.Router();
 
 
+db.connect()
+  .then(() => console.log('Conexão com o banco de dados estabelecida'))
+  .catch(err => console.error('Erro ao conectar ao banco de dados:', err));
+
 
 
 routes.use(express.json());
@@ -71,7 +75,7 @@ routes.get('/cad-usuarios', function (_req: Request, res: Response) {
 routes.post('/cad-usuarios', async function (req: Request, res: Response) {
   try {
     await InsereUsu(req.body.email, req.body.cpf, req.body.senha, req.body.nome);
-    res.send('<script>alert("Usuário cadastrado com sucesso"); window.location="/cad-usuarios";</script>');
+    res.redirect('/login');
   } catch (erro) {
     console.error('Erro ao obter informações do sistema:', erro);
     res.send('Não foi possível finalizar o cadastro' + erro);

@@ -3,9 +3,7 @@ import passport from 'passport';
 import db from './conexao';
 
 
-db.connect()
-  .then(() => console.log('Conexão com o banco de dados estabelecida'))
-  .catch(err => console.error('Erro ao conectar ao banco de dados:', err));
+
 
 
 
