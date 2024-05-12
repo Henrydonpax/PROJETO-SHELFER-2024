@@ -6,19 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Link css-->
-    <link rel="stylesheet" href="css/menuprodutos.css"><!--Fim-->
+    <link rel="stylesheet" href="css/home2.css"><!--Fim-->
 
     <!--Fonte Google Bungee Shade-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gruppo&display=swap" rel="stylesheet">
     <!--Fim-->
-    
+
     <!--Google Fonts ROBOTO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
 
     <!--GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,6 +31,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!---->
 
+    <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 
     <link rel="icon" href="../public/css/image-PhotoRoom (1).png" type="image/x-icon">
@@ -44,13 +46,7 @@
 
 
 
-
-        <div class="menulateral">
-
-            <div class="arrow">
-                <span class="material-symbols-outlined">arrow_back</span>
-            </div>
-
+        <div class="menulateral" onmouseover="ExpandeMenu()" onmouseout="RetraiMenu()">
             <div class="menu">
                 <span class="material-symbols-outlined">manage_accounts</span>
                 <a href="menuussuarios.html">
@@ -82,7 +78,9 @@
 
             <div class="menu">
                 <span class="material-symbols-outlined">local_shipping</span>
-                <div class="txt">Fornecedores</div>
+                <a href="menufornecedores.html">
+                    <div class="txt">Fornecedores</div>
+                </a>
             </div>
 
 
@@ -121,23 +119,28 @@
                     <button type="submit"><i class="bi bi-search"></i> </button>
                 </form>
 
+            </div>
+
+
+            <div class="query-produtos">
+                <ul>
+
+                </ul>
+
+
+
+
 
 
             </div>
 
 
 
-            <div class="central-grid">
-
-                <a href="cadastroprodutos2.html">
-                    <div class="box">Cadastro de Produtos</div>
-                </a>
-                <a href="#">
-                    <div class="box">Consultas</div>
-                </a>
 
 
-            </div>
+
+
+
 
 
 
@@ -147,16 +150,7 @@
 
         </div><!--central-->
 
-
-
-
-
-
-
     </div>
-
-    </div>
-
 
 </body>
 
@@ -164,18 +158,19 @@
 <script>
 
 
+    function ExpandeMenu() {
 
+        var menulateral = document.querySelector(".menulateral")
+        menulateral.classList.add('expande');
 
-    var arrow = document.querySelector(".arrow")
-    var menulateral = document.querySelector(".menulateral")
-
-    arrow.onclick = e => {
-        if (!menulateral.classList.contains('oculto')) {
-            menulateral.classList.add('oculto');
-        } else {
-            menulateral.classList.remove('oculto');
-        }
     }
+
+    function RetraiMenu() {
+
+        var menulateral = document.querySelector(".menulateral")
+        menulateral.classList.remove('expande');
+    }
+
 
 
 </script>

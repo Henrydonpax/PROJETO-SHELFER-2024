@@ -49,6 +49,14 @@ routes.get('/home', function (_req: Request, res: Response) {
 });
 
 
+routes.get('/produtos', function(_req: Request, res:Response){
+  res.sendFile(path.join(__dirname + '../../public/menuprodutos.html'));
+});
+
+
+routes.post('/produtos', function(_req:Request, res:Response){
+
+});
 
 
 routes.get('/cad-produtos', function (_req: Request, res: Response) {
