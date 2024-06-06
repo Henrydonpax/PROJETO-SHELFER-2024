@@ -10,7 +10,7 @@ function validarCPF(cpf: string): boolean {
         return false;
     }
 
-    // Verificar se todos os dígitos são iguais (ex: 111.111.111-11)
+    // Verificar se todos os dígitos são iguais 
     const allEqual = new Set(cpf.split('')).size === 1;
     if (allEqual) {
         return false;

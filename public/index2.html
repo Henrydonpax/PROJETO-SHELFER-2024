@@ -61,7 +61,7 @@
         </div>
 
         <script>
-            // Se houver mensagens de erro definidas na URL (após uma tentativa de login mal-sucedida)
+            // Se houver mensagens de erro definidas na URL (após login mal-sucedido)
             const urlParams = new URLSearchParams(window.location.search);
             const errorMessage = urlParams.get('error');
             if (errorMessage) {
