@@ -7,6 +7,7 @@ const port = 8080;
 import passport from 'passport';
 const LocalStrategy = require('passport-local').Strategy;
 import session from 'express-session';
+import cookieParser from 'cookie-parser';
 
 
 app.use(session({
@@ -17,6 +18,7 @@ app.use(session({
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
   
@@ -27,6 +29,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/imgs'));
 
 app.use(routes);
+
 
 
 
